@@ -11,6 +11,29 @@ public class SmaTests
     [Fact]
     public void SmaDouble()
     {
+        {
+            // Arrange
+            const int StartIdx = 1;
+            const int EndIdx   = 1;
+            double[]  open     = new Double[] { 100, 125 };
+            double[]  high     = new Double[] { 130, 128 };
+            double[]  low      = new Double[] { 90, 100 };
+            double[]  close    = new Double[] { 125, 110 };
+
+            // Act
+            SmaResult actualResult = TAMath.Sma(
+                                                StartIdx,
+                                                EndIdx,
+                                                close, 2);
+            // Assert
+            actualResult.Should().NotBeNull();
+            actualResult.RetCode.Should().Be(RetCode.Success);
+        }
+
+
+
+        {
+
         // Arrange
         Fixture fixture = new();
         const int StartIdx = 0;
@@ -26,6 +49,8 @@ public class SmaTests
         // Assert
         actualResult.Should().NotBeNull();
         actualResult.RetCode.Should().Be(RetCode.Success);
+
+        }
     }
         
     [Fact]

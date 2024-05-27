@@ -73,8 +73,13 @@ public abstract class CandleIndicator<T>
     /// <returns>A tuple containing the output variables.</returns>
     protected virtual (int outBegIdx, int outNBElement, int[] outInteger) PrepareOutput(int startIdx, int endIdx)
     {
+        //// Initialize output variables 
+        //(int outBegIdx, int outNBElement, int[] outInteger) = PrepareOutput(startIdx, endIdx);
+
         // Initialize output variables 
-        (int outBegIdx, int outNBElement, int[] outInteger) = PrepareOutput(startIdx, endIdx);
+        int   outBegIdx    = default;
+        int   outNBElement = default;
+        int[] outInteger   = new int[int.Max(0, endIdx - startIdx + 1)];
         
         // Return the output variables.
         return (outBegIdx, outNBElement, outInteger);
