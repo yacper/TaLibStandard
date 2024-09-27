@@ -8,6 +8,13 @@
     <DefaultDocumentationFolder>../../docs/candles</DefaultDocumentationFolder>
     <DefaultDocumentationLinksOutputFile>../../docs/links</DefaultDocumentationLinksOutputFile>
     <DefaultDocumentationAssemblyPageName>Atypical.TechnicalAnalysis.Candles</DefaultDocumentationAssemblyPageName>
+
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    		<!--dotnet8 破坏性改动，导致热重载每次都需要更新，去除sourceRevision https://cloud.tencent.com/developer/article/2364669-->
+		<IncludeSourceRevisionInInformationalVersion>false</IncludeSourceRevisionInInformationalVersion>
+
+    <Platforms>AnyCPU;x64</Platforms>
   </PropertyGroup>
 
   <ItemGroup>

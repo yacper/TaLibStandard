@@ -1,7 +1,11 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
+  <PropertyGroup>
+    <Platforms>AnyCPU;x64</Platforms>
+  </PropertyGroup>
+
   <ItemGroup>
-    <ProjectReference Include="..\..\src\TechnicalAnalysis.Functions\TechnicalAnalysis.Functions.csproj"/>
+    <ProjectReference Include="..\..\src\TechnicalAnalysis.Functions\TechnicalAnalysis.Functions.csproj" />
   </ItemGroup>
 
   <ItemGroup>
@@ -13,13 +17,13 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
     </PackageReference>
-    <PackageReference Update="Microsoft.NET.Test.Sdk" Version="17.8.0"/>
-    <PackageReference Update="xunit" Version="2.6.2"/>
+    <PackageReference Update="Microsoft.NET.Test.Sdk" Version="17.8.0" />
+    <PackageReference Update="xunit" Version="2.6.2" />
     <PackageReference Update="xunit.runner.visualstudio" Version="2.5.4">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
-    <PackageReference Update="FluentAssertions" Version="6.12.0"/>
+    <PackageReference Update="FluentAssertions" Version="6.12.0" />
   </ItemGroup>
 
 </Project>

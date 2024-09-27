@@ -9,10 +9,16 @@
     <DefaultDocumentationLinksOutputFile>../../docs/links</DefaultDocumentationLinksOutputFile>
     <DefaultDocumentationAssemblyPageName>Atypical.TechnicalAnalysis.Functions</DefaultDocumentationAssemblyPageName>
     <NoWarn>$(NoWarn);CS1591</NoWarn>
+		<TargetFramework>net8.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+    <Platforms>AnyCPU;x64</Platforms>
+		<!--dotnet8 破坏性改动，导致热重载每次都需要更新，去除sourceRevision https://cloud.tencent.com/developer/article/2364669-->
+		<IncludeSourceRevisionInInformationalVersion>false</IncludeSourceRevisionInInformationalVersion>
+
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\TechnicalAnalysis.Common\TechnicalAnalysis.Common.csproj"/>
+    <ProjectReference Include="..\TechnicalAnalysis.Common\TechnicalAnalysis.Common.csproj" />
   </ItemGroup>
 
   <!-- Development dependencies -->
